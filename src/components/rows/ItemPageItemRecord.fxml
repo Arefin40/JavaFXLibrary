@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxWidth="-Infinity" minWidth="-Infinity" prefWidth="473.0" spacing="24.0" stylesheets="@../../application/App.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ItemPageItemRecord">
+   <children>
+      <HBox HBox.hgrow="ALWAYS">
+         <children>
+            <Label fx:id="memberName" text="Shahriar Arefin" textFill="#475569">
+               <font>
+                  <Font name="Poppins Regular" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="10.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="106.0">
+         <children>
+            <Label fx:id="checkoutDate" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="106.0" text="01-01-2023" textFill="#475569">
+               <font>
+                  <Font name="Poppins Regular" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="117.0" layoutY="10.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="96.0">
+         <children>
+            <Label fx:id="checkinDate" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="96.0" text="01-01-2023" textFill="#475569">
+               <font>
+                  <Font name="Poppins Regular" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</HBox>

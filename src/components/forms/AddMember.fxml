@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" fillWidth="false" onMouseClicked="#close" styleClass="backdrop" stylesheets="@../../application/App.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FormAddMember">
+   <children>
+      <VBox fx:id="form"  onMouseClicked="#consume" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="451.0" prefWidth="388.5" spacing="50.0" styleClass="overlay" VBox.vgrow="NEVER">
+         <children>
+            <Label alignment="CENTER" styleClass="text-primary" text="Add New Member" textAlignment="CENTER">
+               <font>
+                  <Font name="Poppins SemiBold" size="32.0" />
+               </font>
+            </Label>
+            <VBox spacing="32.0">
+               <children>
+                  <VBox spacing="4.0">
+                     <children>
+                        <Label styleClass="text-primary" text="Member ID">
+                           <font>
+                              <Font name="Poppins Medium" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="memberID" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0">
+                           <styleClass>
+                              <String fx:value="bg-white" />
+                              <String fx:value="border" />
+                              <String fx:value="border-radius-4" />
+                              <String fx:value="border-slate-300" />
+                           </styleClass>
+                           <font>
+                              <Font name="Poppins Regular" size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" spacing="4.0">
+                     <children>
+                        <Label styleClass="text-primary" text="Member Name">
+                           <font>
+                              <Font name="Poppins Medium" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="memberName" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0">
+                           <styleClass>
+                              <String fx:value="bg-white" />
+                              <String fx:value="border" />
+                              <String fx:value="border-radius-4" />
+                              <String fx:value="border-slate-300" />
+                           </styleClass>
+                           <font>
+                              <Font name="Poppins Regular" size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <Button mnemonicParsing="false" onAction="#addMember" text="Add Member">
+               <styleClass>
+                  <String fx:value="clicky" />
+                  <String fx:value="btn-primary" />
+                  <String fx:value="bg-rounded" />
+               </styleClass>
+               <padding>
+                  <Insets bottom="10.0" left="24.0" right="24.0" top="10.0" />
+               </padding>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="60.0" left="50.0" right="50.0" top="40.0" />
+         </padding>
+      </VBox>
+   </children>
+</VBox>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="overlay" alignment="CENTER" fillWidth="false" onMouseClicked="#close" styleClass="backdrop" stylesheets="@../../application/App.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="components.alert.AlertController">
+   <children>
+      <VBox fx:id="overlayContainer" alignment="TOP_CENTER" onMouseClicked="#consume" styleClass="overlay">
+         <children>
+            <VBox alignment="CENTER" styleClass="active">
+               <padding>
+                  <Insets bottom="40.0" left="60.0" right="60.0" top="40.0" />
+               </padding>
+               <children>
+                  <HBox fx:id="iconContainer" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="64.0" prefWidth="64.0">
+                     <children>
+                        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="36.0">
+                           <children>
+                              <SVGPath fx:id="icon" content="M24.629 22.507a1.499 1.499 0 1 1-2.122 2.121L18 20.121l-4.507 4.508a1.495 1.495 0 0 1-1.635.325 1.499 1.499 0 0 1-.487-2.447L15.88 18l-4.508-4.507a1.499 1.499 0 1 1 2.122-2.122L18 15.88l4.508-4.508a1.499 1.499 0 1 1 2.12 2.122L20.122 18l4.508 4.507Z" fill="WHITE" style="-fx-fill: white;" />
+                           </children>
+                           <styleClass>
+                              <String fx:value="iconBox" />
+                              <String fx:value="bg-rounded" />
+                           </styleClass>
+                        </VBox>
+                     </children>
+                     <styleClass>
+                        <String fx:value="bg-rounded" />
+                        <String fx:value="danger" />
+                     </styleClass>
+                  </HBox>
+                  <Label fx:id="title" text="Modal Label" textAlignment="CENTER" textFill="#1e293b">
+                     <VBox.margin>
+                        <Insets top="32.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Poppins SemiBold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="description" layoutX="70.0" layoutY="146.0" prefWidth="320.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt" textAlignment="CENTER" textFill="#64748b" wrapText="true">
+                     <font>
+                        <Font name="Poppins Regular" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="16.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" onMouseClicked="#close" prefHeight="48.0">
+               <children>
+                  <HBox alignment="CENTER" styleClass="more-clicky" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label text="OK" textAlignment="CENTER">
+                           <font>
+                              <Font name="Poppins SemiBold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <styleClass>
+                  <String fx:value="border-t" />
+                  <String fx:value="border-slate-200" />
+                  <String fx:value="control" />
+               </styleClass>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>
